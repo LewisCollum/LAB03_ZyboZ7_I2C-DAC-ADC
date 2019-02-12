@@ -1,0 +1,2 @@
+/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/state/TestStateController.vhd:13:5:@0ms:(report note): Hello world!
+simulation stopped @0ms with status 0

@@ -1,0 +1,16 @@
+v 4
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/StateController.vhd" "9778cf71f873036031b4af3894e24f7463d56b90" "20190212011852.930":
+  entity statecontroller at 1( 0) + 0 on 17;
+  architecture behavioral of statecontroller at 14( 252) + 0 on 18;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/Button.vhd" "ac7a8ec152d519ff59ae70c1232456f906e66dfe" "20190212011852.895":
+  package button at 1( 0) + 0 on 15;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/LCD.vhd" "464d4bc5920a744a3695a715c07adf7d784ac9ce" "20190212011852.865":
+  package lcd at 1( 0) + 0 on 13;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/common.vhd" "4b731d3c5139e8b8a569422544603dca3c0718dd" "20190212011852.834":
+  package common at 1( 0) + 0 on 11;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/State.vhd" "3ddc3da821aef55746a82175f933ca7b3def7968" "20190212011852.849":
+  package state at 1( 0) + 0 on 12;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/I2C.vhd" "4fca0b7ea9e99c13095960af81b3c87c9dcf8020" "20190212011852.880":
+  package i2c at 1( 0) + 0 on 14;
+file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/Interrupt.vhd" "6eda4bdd5b8181923a9b9b51a00707bfbf7f796f" "20190212011852.912":
+  package interrupt at 1( 0) + 0 on 16;

@@ -1,7 +1,0 @@
-v 4
-file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/state/StateController.vhd" "41966ad48a042ca10b210682cbea4ac8d2fbeec4" "20190212044856.442":
-  entity statecontroller at 1( 0) + 0 on 13;
-  architecture behavioral of statecontroller at 18( 385) + 0 on 14;
-file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/state/TestStateController.vhd" "8d4f1d42b6049c4c4b35850ca1e824a076fa436b" "20190212044018.141":
-  entity test_statecontroller at 1( 0) + 0 on 11;
-  architecture test of test_statecontroller at 8( 130) + 0 on 12;

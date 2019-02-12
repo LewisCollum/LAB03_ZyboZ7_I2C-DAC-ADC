@@ -1,3 +1,0 @@
-v 4
-file / "/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/lcd/LCDInterrupt.vhd" "b0a75aadf69a1c42756bb145413f8081a6ff9899" "20190212044315.669":
-  package lcdinterrupt at 1( 0) + 0 on 11;

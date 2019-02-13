@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 package ClockUtilities is
   function frequencyToPeriod(frequency: positive) return time;
-  procedure generateClock(signal clock: out std_logic; frequency: integer);
+  procedure generateClock(signal clock: out std_logic; frequency: positive);
 end package ClockUtilities;
 
 package body ClockUtilities is
@@ -12,8 +12,8 @@ package body ClockUtilities is
     return 1 sec / frequency;
   end function frequencyToPeriod;
 
-  procedure generateClock(signal clock: out std_logic; frequency: integer) is
-    constant period: time := 1 sec / frequency;
+  procedure generateClock(signal clock: out std_logic; frequency: positive) is
+    constant period: time := frequencyToPeriod(frequency);
     constant halfPeriod: time := period / 2;
   begin
       loop

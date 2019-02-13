@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 
 library system_bus;
 use system_bus.InterruptBus.InterruptBus;
+use system_bus.InterruptBus.peripheralsAreBusy;
 use system_bus.StateBus.StateBus;
 use system_bus.StateBus.System;
 use system_bus.StateBus.Sensor;
@@ -26,7 +27,7 @@ begin
       case state.system is
 
         when initialize =>
-          if interrupt.lcd.isBusy = '0' and interrupt.i2c.isBusy = '0' then
+          if not peripheralsAreBusy(interrupt) then
             state.system <= pause;
           end if;
           

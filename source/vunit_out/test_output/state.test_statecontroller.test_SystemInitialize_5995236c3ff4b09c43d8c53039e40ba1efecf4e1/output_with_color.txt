@@ -1,2 +1,0 @@
-/home/charon/lab/03_ZyboZ7_Analog/ZyboZ7_Analog/source/state/TestStateController.vhd:35:9:@160ns:(report note): done
-simulation stopped @160ns with status 0

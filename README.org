@@ -1,0 +1,17 @@
+* ZyboZ7 Working with Analog
+
+* Libraries
+** state
+*** [100%] StateController
+**** DONE Handle new reset state
+	 CLOSED: [2019-02-13 Wed 18:19] SCHEDULED: <2019-02-14 Thu>
+** lcd 
+*** [%] LCDInterrupt
+*** [%] LCDController
+
+** system_bus
+*** [100%] StateBus
+**** DONE Add reset state to "system" states.
+	 CLOSED: [2019-02-13 Wed 18:14] SCHEDULED: <2019-02-13 Wed>
+*** [%] InterruptBus
+*** [%] DataBus

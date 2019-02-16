@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1550001420">
+  <File Type="PA-TCL" Name="LCD_Controller.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="LCD_Controller_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="LCD_Controller_reports.tcl"/>
+  <File Type="RDS-RDS" Name="LCD_Controller.vds"/>
+  <File Type="RDS-UTIL" Name="LCD_Controller_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="LCD_Controller_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="LCD_Controller.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="LCD_Controller_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="LCD_Controller_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/source/lcd/Wait_Timer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCD_Controller.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/button/btn_tb.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/button/ButtonInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/button/btn_debounce_toggle.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/state/StateController.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="state"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/i2c/i2c_master.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="i2c"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/i2c/I2CInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="i2c"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/system_bus/InterruptBus.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/system_bus/StateBus.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/system_bus/DataBus.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/testing/PulseUtilities.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="testing"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/testing/ClockUtilities.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="testing"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/board/Common.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="board"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="LCD_Controller"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

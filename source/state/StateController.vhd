@@ -12,7 +12,7 @@ entity StateController is
   port(
     clock : in std_logic;
     interrupt : in InterruptBus;
-    state : out StateBus);
+    state : buffer StateBus);
 end entity StateController;
 
 architecture behavioral of StateController is

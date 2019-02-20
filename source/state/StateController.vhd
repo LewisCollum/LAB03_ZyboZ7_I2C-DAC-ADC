@@ -18,6 +18,9 @@ entity StateController is
 end entity StateController;
 
 architecture behavioral of StateController is
+
+    signal foo: InterruptBus;
+
 begin  
   process(clock, interrupt)
   begin  

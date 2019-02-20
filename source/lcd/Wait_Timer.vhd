@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Wait_Timer is
     Generic( 
-           Board_Clock : INTEGER := 50_000_000--ns
+           Board_Clock : INTEGER := 125_000_000--Hz
            );
     Port ( 
            iclk : in STD_LOGIC;
@@ -20,29 +20,36 @@ architecture Behavioral of Wait_Timer is
     signal count_max : INTEGER := 0;
     signal ienable_prev : STD_LOGIC := '0';
     signal count : boolean := false;
+    signal oenable_buffer : std_logic := '0';
     
 begin
 
-count_max <= (Board_Clock * iwait_time) / (1e9);
+count_max <= ((Board_Clock/(1e6)) * (iwait_time));
 
-wait_timer : process(iclk, ienable)
+oenable <= oenable_buffer;
+
+process(ienable, counter)
 begin
-if rising_edge(iclk) then
-    ienable_prev <= ienable;
-    if ienable = '1' AND ienable_prev = '0' then--ienable rising edge
+    if rising_edge(ienable) then
         count <= true;
     end if;
+    if oenable_buffer = '1' then
+        count <= false;
+    end if;
+end process;
 
-    if count then
-        if counter < count_max then
-            oenable <= '0';
-            counter <= counter + 1;
-        else
-            oenable <= '1';
-            counter <= 0;
-            count <= false;
+wait_timer : process(iclk)
+begin
+    if rising_edge(iclk) then
+        oenable_buffer <= '0';
+        if count then
+            if counter < count_max then
+                counter <= counter + 1;
+            else
+                oenable_buffer <= '1';
+                counter <= 0;
+            end if;
         end if;
     end if;
-end if;
 end process;
 end Behavioral;

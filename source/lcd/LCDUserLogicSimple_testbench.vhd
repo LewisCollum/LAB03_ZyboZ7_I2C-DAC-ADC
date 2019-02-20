@@ -5,15 +5,15 @@ use IEEE.NUMERIC_STD.all;
 library system_bus;
 use system_bus.StateBus.all;
 library lcd;
-use lcd.LCDInterrupt.all;
+use lcd.LCDInterrupt.LCDInterrupt;
 use lcd.LCDCommunication.all;
 use lcd.LCDASCII.all;
 
-entity LCDUserLogic_testbench is
-end LCDUserLogic_testbench;
+entity LCDUserLogicSimple_testbench is
+end LCDUserLogicSimple_testbench;
 
-architecture behavioral of LCDUserLogic_testbench is
-	component LCDUserLogic
+architecture behavioral of LCDUserLogicSimple_testbench is
+	component LCDUserLogicSimple
 		port(
 			iclock: in std_logic;
 			state: in StateBus;
@@ -28,9 +28,9 @@ architecture behavioral of LCDUserLogic_testbench is
 	signal Control: LCDControl;
 begin
 
-    iclock <= not iclock after 8 ns;
+     iclock <= not iclock after 8 ns;
 
-	UUT: LCDUserLogic
+	UUT: LCDUserLogicSimple
 		port map(
 			iclock => iclock,
 			state => state,
@@ -43,9 +43,9 @@ begin
 	begin
 		-- User code here.
 		state.System <= initialize;
-		state.Sensor <= light;
-		state.Clock <= disabled;
-		wait for 10 ns;
+        state.Sensor <= light;
+        state.Clock <= disabled;
+        wait for 10 ns;
 
 		wait;
 	end process;

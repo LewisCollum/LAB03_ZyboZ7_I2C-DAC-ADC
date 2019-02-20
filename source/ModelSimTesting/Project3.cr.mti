@@ -1,0 +1,199 @@
+C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/DataBus.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/DataBus.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package DataBus
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.statebus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(6): (vcom-1195) Cannot find expanded name "system_bus.StateBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(6): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdinterrupt.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(8): (vcom-1195) Cannot find expanded name "lcd.LCDInterrupt".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(8): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdcommunication.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(9): (vcom-1195) Cannot find expanded name "lcd.LCDCommunication".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(9): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdascii.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(10): (vcom-1195) Cannot find expanded name "lcd.LCDASCII".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(10): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic_testbench.vhd(12): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0 12.0 14.0 15.0 17.0 18.0 20.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController_testbench.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.databus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController_testbench.vhd(6): (vcom-1195) Cannot find expanded name "system_bus.DataBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController_testbench.vhd(6): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController_testbench.vhd(8): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDInterrupt.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDInterrupt.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package LCDInterrupt
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.statebus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(5): (vcom-1195) Cannot find expanded name "system_bus.StateBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(5): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdinterrupt.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(7): (vcom-1195) Cannot find expanded name "lcd.LCDInterrupt".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(7): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdcommunication.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(8): (vcom-1195) Cannot find expanded name "lcd.LCDCommunication".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(8): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdascii.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(9): (vcom-1195) Cannot find expanded name "lcd.LCDASCII".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(9): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogic.vhd(11): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0 12.0 14.0 15.0 17.0 18.0 20.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController.vhdl {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.databus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController.vhdl(5): (vcom-1195) Cannot find expanded name "system_bus.DataBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController.vhdl(5): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController.vhdl(7): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDCommunication.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDCommunication.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package LCDCommunication
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find lcd.lcdinterrupt.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(6): (vcom-1195) Cannot find expanded name "lcd.LCDInterrupt".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(6): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(7): (vcom-1598) Library "button" not found.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(8): (vcom-1136) Unknown identifier "button".
+** Error: (vcom-11) Could not find i2c.i2cinterrupt.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(10): (vcom-1195) Cannot find expanded name "i2c.I2CInterrupt".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(10): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/InterruptBus.vhd(12): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 13.0 14.0 16.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Wait_Timer_testbench
+-- Compiling architecture behavioral of Wait_Timer_testbench
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDASCII.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDASCII.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package LCDASCII
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Wait_Timer
+-- Compiling architecture Behavioral of Wait_Timer
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController_testbench.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.databus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController_testbench.vhd(6): (vcom-1195) Cannot find expanded name "system_bus.DataBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController_testbench.vhd(6): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/ServoController_testbench.vhd(8): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find lcd.lcdcommunication.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd(7): (vcom-1195) Cannot find expanded name "lcd.LCDCommunication".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd(7): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdinterrupt.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd(8): (vcom-1195) Cannot find expanded name "lcd.LCDInterrupt".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd(8): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller_testbench.vhd(10): VHDL Compiler exiting
+
+} {9.0 10.0 11.0 13.0 14.0 16.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController.vhdl {0 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find system_bus.databus.
+** Error (suppressible): C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController.vhdl(5): (vcom-1195) Cannot find expanded name "system_bus.DataBus".
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController.vhdl(5): Unknown expanded name.
+** Error: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/clock/ClockController.vhdl(7): VHDL Compiler exiting
+
+} {7.0 8.0 9.0 11.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find lcd.lcdcommunication.
+** Error (suppressible): C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd(6): (vcom-1195) Cannot find expanded name "lcd.LCDCommunication".
+** Error: C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd(6): Unknown expanded name.
+** Error: (vcom-11) Could not find lcd.lcdinterrupt.
+** Error (suppressible): C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd(7): (vcom-1195) Cannot find expanded name "lcd.LCDInterrupt".
+** Error: C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd(7): Unknown expanded name.
+** Error: C:\Users\ulab\Documents\GitHub\LAB03_ZyboZ7_I2C-DAC-ADC\source\lcd\LCD_Controller.vhd(9): VHDL Compiler exiting
+
+} {9.0 10.0 11.0 13.0 14.0 16.0} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/VariableClockEnable.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/pwm/VariableClockEnable.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity VariableClockEnable
+-- Compiling architecture behavioral of VariableClockEnable
+
+} {} {}} C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/StateBus.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/system_bus/StateBus.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package StateBus
+
+} {} {}}

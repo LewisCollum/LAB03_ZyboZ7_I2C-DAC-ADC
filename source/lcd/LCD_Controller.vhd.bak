@@ -15,12 +15,22 @@ entity LCD_Controller is
 end LCD_Controller;
 
 architecture Behavioral of LCD_Controller is
+
+--component Wait_Timer is
+--    Generic( 
+--           Board_Clock : INTEGER := 125_000_000);--ns
+--    Port ( 
+--           iclk : in STD_LOGIC;
+--           ienable : in STD_LOGIC;
+--           iwait_time : in INTEGER;--in ns
+--           oenable : out STD_LOGIC);
+--end component;
 		
 	type ModeStates is (Power_Up_Mode, Initialize_Mode, User_Mode); --All Modes
 
 	constant power_up_time				: integer := 20_000;--20 ms
 	constant enable_time           		: integer := 5_000;--5ms (15 ms period for enable pulse)
-	constant initialize_instructions    : integer := 14;--que
+	constant initialize_instructions    : integer := 13;--que
 
 	signal internal_enable_state		: integer range 0 to 2;
 	signal time_counter					: integer := 0;
@@ -90,8 +100,7 @@ begin
             "0000" when 10,
             "0110" when 11,--inc cursor to the right when writing and dont shift screen
             "0000" when 12,
-            "1100" when 13,--Display on
-            "0000" when 14;--Nothing
+            "1100" when 13;--Display on
         
     process(iclock, Mode, internal_enable_state)--Mode process
     begin

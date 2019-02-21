@@ -11,7 +11,7 @@ use system_bus.InterruptBus.InterruptBus;
 use testing.ClockUtilities.all;
 use testing.PulseUtilities.all;
 use board.ZyboZ7;
-context vunit_lib.vunit_context;
+use vunit_lib.run_pkg.all;
 
 entity Test_StateController is
   generic (runner_cfg : string);
@@ -34,14 +34,10 @@ begin
         lcd => (others => '0'),
         i2c => (others => '0'));
 
-      if run("test_SystemInitializeToPause") then
+      if run("test_SystemInitializeToFetch") then
         assert state.system = initialize;    
         wait for period * 2;
-        assert state.system = pause;
-        wait for period / 2;
-        highPulseForTime(interrupt.button.pause, period);
-        assert state.system = pause;
-        wait for period * 5;
+        assert state.system = fetch;
         
       elsif run("test_PauseToReset") then
         wait for period;

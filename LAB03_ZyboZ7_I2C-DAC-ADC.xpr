@@ -234,14 +234,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/source/lcd/LCDUserLogic.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="lcd"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/source/pwm/VariableClockEnable.vhdl">
         <FileInfo>
           <Attr Name="Library" Val="PWM"/>
@@ -261,14 +253,6 @@
       <File Path="$PPRDIR/source/pwm/ServoController_testbench.vhd">
         <FileInfo>
           <Attr Name="Library" Val="PWM"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/lcd/LCDUserLogic_testbench.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="lcd"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

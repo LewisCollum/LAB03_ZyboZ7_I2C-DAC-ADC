@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1756 
+INFO: Helper process launched with PID 8524 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 409.738 ; gain = 99.953
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 409.785 ; gain = 99.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'LCD_Test' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:21]
 INFO: [Synth 8-638] synthesizing module 'LCDUserLogicSimple' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogicSimple.vhd:19]
@@ -25,15 +25,15 @@ WARNING: [Synth 8-614] signal 'wordChange' is read in the process but is not in 
 WARNING: [Synth 8-614] signal 'word' is read in the process but is not in the sensitivity list [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogicSimple.vhd:132]
 WARNING: [Synth 8-614] signal 'charNibble' is read in the process but is not in the sensitivity list [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogicSimple.vhd:132]
 WARNING: [Synth 8-614] signal 'nibbleSelect' is read in the process but is not in the sensitivity list [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogicSimple.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'LCD_Controller' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'LCD_Controller' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:16]
 INFO: [Synth 8-638] synthesizing module 'Wait_Timer' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer.vhd:17]
 	Parameter Board_Clock bound to: 125000000 - type: integer 
 WARNING: [Synth 8-614] signal 'oenable_buffer' is read in the process but is not in the sensitivity list [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer.vhd:31]
 INFO: [Synth 8-256] done synthesizing module 'Wait_Timer' (1#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/Wait_Timer.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'LCD_Controller' (2#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'LCD_Controller' (2#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'LCDUserLogicSimple' (3#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCDUserLogicSimple.vhd:19]
-INFO: [Synth 8-638] synthesizing module 'StateController' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/state/StateController.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'StateController' (4#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/state/StateController.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'StateController' [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/state/StateController.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'StateController' (4#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/state/StateController.vhd:20]
 WARNING: [Synth 8-3848] Net Interrupt_s[button][reset] in module/entity LCD_Test does not have driver. [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:24]
 WARNING: [Synth 8-3848] Net Interrupt_s[button][pause] in module/entity LCD_Test does not have driver. [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:24]
 WARNING: [Synth 8-3848] Net Interrupt_s[button][sensorIncrement] in module/entity LCD_Test does not have driver. [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:24]
@@ -41,13 +41,14 @@ WARNING: [Synth 8-3848] Net Interrupt_s[button][clockEnable] in module/entity LC
 WARNING: [Synth 8-3848] Net Interrupt_s[lcd][isBusy] in module/entity LCD_Test does not have driver. [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:24]
 WARNING: [Synth 8-3848] Net Interrupt_s[i2c][isBusy] in module/entity LCD_Test does not have driver. [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'LCD_Test' (5#1) [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:21]
+WARNING: [Synth 8-3331] design StateController has unconnected port interrupt[button][pause]
 WARNING: [Synth 8-3331] design LCD_Controller has unconnected port userControl[RW]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[3]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[2]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[1]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.539 ; gain = 150.754
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.680 ; gain = 150.891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,7 +58,6 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[button][reset] to constant 0 [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:51]
-WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[button][pause] to constant 0 [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:51]
 WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[button][sensorIncrement] to constant 0 [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:51]
 WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[button][clockEnable] to constant 0 [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:51]
 WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[lcd][isBusy] to constant 0 [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/board/LCD_Test.vhd:51]
@@ -66,10 +66,10 @@ WARNING: [Synth 8-3295] tying undriven pin Inst_StateController:interrupt[i2c][i
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.539 ; gain = 150.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.680 ; gain = 150.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.539 ; gain = 150.754
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 460.680 ; gain = 150.891
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -87,22 +87,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 789.762 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 790.156 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 789.762 ; gain = 479.977
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 790.156 ; gain = 480.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 789.762 ; gain = 479.977
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 790.156 ; gain = 480.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 789.762 ; gain = 479.977
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 790.156 ; gain = 480.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'Mode_reg' in module 'LCD_Controller'
 INFO: [Synth 8-5544] ROM "ienable_s" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -151,11 +151,10 @@ WARNING: [Synth 8-327] inferring latch for variable 'charNibble_reg[0]' [C:/User
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-              initialize |                              001 |                               00
-                   pause |                              010 |                               01
-                   fetch |                              100 |                               10
+              initialize |                                0 |                               00
+                   fetch |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg[system]' using encoding 'one-hot' in module 'StateController'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg[system]' using encoding 'sequential' in module 'StateController'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -166,7 +165,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg[system]' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg[sensor]' using encoding 'one-hot' in module 'StateController'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 789.762 ; gain = 479.977
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 790.156 ; gain = 480.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,18 +191,18 @@ Detailed RTL Component Info :
 	                 8x32  Multipliers := 1     
 +---Muxes : 
 	  27 Input      9 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 23    
+	   2 Input      8 Bit        Muxes := 46    
 	   4 Input      7 Bit        Muxes := 7     
 	   2 Input      7 Bit        Muxes := 9     
 	  35 Input      5 Bit        Muxes := 1     
 	  16 Input      4 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   3 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 15    
-	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 7     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -245,23 +244,21 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	  27 Input      9 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 23    
+	   2 Input      8 Bit        Muxes := 46    
 	   4 Input      7 Bit        Muxes := 7     
 	   2 Input      7 Bit        Muxes := 9     
 	  35 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 1     
 Module StateController 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   3 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -278,69 +275,69 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element unit/Inst_LCD_Controller/Control_reg[RW] was removed.  [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element unit/Inst_LCD_Controller/Control_reg[RW] was removed.  [C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/source/lcd/LCD_Controller.vhd:100]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[3]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[2]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[1]
 WARNING: [Synth 8-3331] design LCD_Test has unconnected port sw[0]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_StateController/state_reg[clock] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\unit/userControllerInternal_reg[Reset] )
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][0]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][0]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][0]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][0]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][0]' (LD) to 'unit/secondLine_reg[7][4]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[6][0]' (LD) to 'unit/secondLine_reg[6][1]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][0]' (LD) to 'unit/secondLine_reg[4][1]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][0]' (LD) to 'unit/secondLine_reg[3][1]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][0]' (LD) to 'unit/secondLine_reg[2][1]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][0]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][0]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][0]' (LD) to 'unit/secondLine_reg[0][1]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][0]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][0]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][0]' (LD) to 'unit/FirstLine_reg[14][4]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][0]' (LD) to 'unit/FirstLine_reg[13][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[12][0]' (LD) to 'unit/FirstLine_reg[12][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[11][0]' (LD) to 'unit/FirstLine_reg[5][0]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][0]' (LD) to 'unit/FirstLine_reg[5][0]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][0]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][0]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][0]' (LD) to 'unit/FirstLine_reg[2][0]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][0]' (LD) to 'unit/secondLine_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][0]' (LD) to 'unit/FirstLine_reg[0][0]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][0]' (LD) to 'unit/FirstLine_reg[1][0]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][0]' (LD) to 'unit/FirstLine_reg[8][5]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][0]' (LD) to 'unit/FirstLine_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][0]' (LD) to 'unit/secondLine_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][0]' (LD) to 'unit/FirstLine_reg[0][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][4]' (LD) to 'unit/secondLine_reg[9][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][4]' (LD) to 'unit/secondLine_reg[8][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][4]' (LD) to 'unit/secondLine_reg[7][2]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[6][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][4]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[6][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][4]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][4]' (LD) to 'unit/FirstLine_reg[14][1]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][4]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][4]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][4]' (LD) to 'unit/FirstLine_reg[6][1]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][4]' (LD) to 'unit/FirstLine_reg[6][1]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][4]' (LD) to 'unit/secondLine_reg[9][5]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][4]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][4]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][4]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][4]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][4]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][4]' (LD) to 'unit/FirstLine_reg[6][1]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][1]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][1]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][1]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][1]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][1]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][1]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[6][1]' (LD) to 'unit/secondLine_reg[6][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][1]' (LD) to 'unit/secondLine_reg[4][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][1]' (LD) to 'unit/secondLine_reg[3][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][1]' (LD) to 'unit/secondLine_reg[2][2]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][1]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][1]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][1]' (LD) to 'unit/secondLine_reg[0][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][1]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][1]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][1]' (LD) to 'unit/FirstLine_reg[14][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][1]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][1]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[12][1]' (LD) to 'unit/FirstLine_reg[12][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][1]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][1]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][1]' (LD) to 'unit/FirstLine_reg[5][1]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][1]' (LD) to 'unit/FirstLine_reg[3][1]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][1]' (LD) to 'unit/FirstLine_reg[3][1]'
@@ -348,42 +345,42 @@ INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][1]' (LD) to 'unit/F
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][1]' (LD) to 'unit/FirstLine_reg[0][1]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][1]' (LD) to 'unit/FirstLine_reg[8][5]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][1]' (LD) to 'unit/FirstLine_reg[2][2]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][5]' (LD) to 'unit/secondLine_reg[8][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][5]' (LD) to 'unit/secondLine_reg[7][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][5]' (LD) to 'unit/secondLine_reg[4][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][5]' (LD) to 'unit/secondLine_reg[3][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][5]' (LD) to 'unit/secondLine_reg[2][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][5]' (LD) to 'unit/secondLine_reg[1][5]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][5]' (LD) to 'unit/FirstLine_reg[15][5]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][5]' (LD) to 'unit/FirstLine_reg[14][5]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][5]' (LD) to 'unit/FirstLine_reg[13][5]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][5]' (LD) to 'unit/FirstLine_reg[11][5]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[11][5]' (LD) to 'unit/FirstLine_reg[10][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[11][5]' (LD) to 'unit/FirstLine_reg[0][6]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[8][5]' (LD) to 'unit/FirstLine_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][5]' (LD) to 'unit/FirstLine_reg[10][6]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][5]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][2]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[3][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[2][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[1][5]' (LD) to 'unit/FirstLine_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[0][5]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[9][2]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[8][2]' (LD) to 'unit/secondLine_reg[8][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[7][2]' (LD) to 'unit/secondLine_reg[7][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[6][2]' (LD) to 'unit/secondLine_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][2]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][2]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[4][2]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[3][2]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[2][2]' (LD) to 'unit/secondLine_reg[2][6]'
 INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[1][2]' (LD) to 'unit/secondLine_reg[1][6]'
-INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][2]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][2]' (LD) to 'unit/secondLine_reg[9][7]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][2]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/secondLine_reg[0][2]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[15][2]' (LD) to 'unit/FirstLine_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[14][2]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[13][2]' (LD) to 'unit/FirstLine_reg[13][6]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[12][2]' (LD) to 'unit/FirstLine_reg[12][3]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][2]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[7][2]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[6][2]' (LD) to 'unit/FirstLine_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][2]' (LD) to 'unit/secondLine_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[5][2]' (LD) to 'unit/FirstLine_reg[0][2]'
 INFO: [Synth 8-3886] merging instance 'unit/FirstLine_reg[4][2]' (LD) to 'unit/FirstLine_reg[2][2]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\unit/FirstLine_reg[2][3] )
@@ -399,7 +396,7 @@ WARNING: [Synth 8-3332] Sequential element (Inst_StateController/state_reg[clock
 WARNING: [Synth 8-3332] Sequential element (unit/secondLine_reg[0][5]) is unused and will be removed from module LCD_Test.
 WARNING: [Synth 8-3332] Sequential element (unit/secondLine_reg[1][3]) is unused and will be removed from module LCD_Test.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 789.762 ; gain = 479.977
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 790.156 ; gain = 480.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -411,13 +408,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 800.000 ; gain = 490.215
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 801.176 ; gain = 491.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 800.188 ; gain = 490.402
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 801.301 ; gain = 491.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -429,7 +426,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -453,7 +450,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -466,7 +463,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -478,25 +475,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -515,14 +512,14 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    41|
 |3     |LUT1   |    15|
-|4     |LUT2   |    48|
-|5     |LUT3   |    28|
-|6     |LUT4   |    53|
+|4     |LUT2   |    49|
+|5     |LUT3   |    25|
+|6     |LUT4   |    52|
 |7     |LUT5   |    27|
 |8     |LUT6   |    19|
 |9     |MUXF7  |     4|
 |10    |FDCE   |     1|
-|11    |FDRE   |    97|
+|11    |FDRE   |    95|
 |12    |FDSE   |     4|
 |13    |LD     |    29|
 |14    |IBUF   |     1|
@@ -533,18 +530,18 @@ Report Instance Areas:
 +------+------------------------+-------------------+------+
 |      |Instance                |Module             |Cells |
 +------+------------------------+-------------------+------+
-|1     |top                     |                   |   374|
-|2     |  Inst_StateController  |StateController    |    25|
-|3     |  unit                  |LCDUserLogicSimple |   341|
-|4     |    Inst_LCD_Controller |LCD_Controller     |   189|
+|1     |top                     |                   |   369|
+|2     |  Inst_StateController  |StateController    |    19|
+|3     |  unit                  |LCDUserLogicSimple |   342|
+|4     |    Inst_LCD_Controller |LCD_Controller     |   188|
 |5     |      Inst_Wait_Timer   |Wait_Timer         |   144|
 +------+------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 820.395 ; gain = 181.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 820.395 ; gain = 510.609
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 821.406 ; gain = 182.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 821.406 ; gain = 511.617
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -557,9 +554,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 140 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 820.965 ; gain = 522.895
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 822.324 ; gain = 524.246
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/LAB03_ZyboZ7_I2C-DAC-ADC.runs/synth_1/LCD_Test.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LCD_Test_utilization_synth.rpt -pb LCD_Test_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 820.965 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 21 14:26:55 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 822.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 21 14:51:40 2019...

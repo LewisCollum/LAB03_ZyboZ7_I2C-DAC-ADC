@@ -21,21 +21,22 @@ architecture behavioral of LCDUserLogicSimple is
 	type nibble is array(0 to 1) of unsigned(3 downto 0);
     type Line is array (0 to 15) of unsigned(7 downto 0);--array (natural range <>) of unsigned(8 downto 0);
     subtype EnableStateRange is integer range 0 to 2; 
+    subtype WordCounterRange is integer range 1 to 34;
 	
 	constant LCD_3State_Enable_Time 	: integer := 6000;--6250;--.125 ms (8000 Hz)
 	
-	signal enable_counter				: integer := 0;
+	signal wordChange                   : std_logic;
+	signal enable_counter				: integer;
 	signal enable_state				    : EnableStateRange;
-	signal word_counter					: integer range 1 to 34 := 1;--zero is special case
+	signal word_counter					: WordCounterRange;--zero is special case
 	signal FirstLine					: Line;-- := (u.I,l.n,l.i,l.t,l.i,l.a,l.l,l.i,l.z,l.i,l.n,l.g,others => c.space);
 	signal secondLine					: Line;-- := (others => c.space);
 	signal word							: unsigned(8 downto 0);
-	signal clk_en 						: std_logic := '0';
 	signal charNibble                   : nibble;
 	signal WriteStatus                  : LCDInterrupt;
 	signal ControllerStatus             : LCDInterrupt;
 	signal userControllerInternal       : UserControl;
-	signal nibbleSelect                 : integer range 0 to 1 := 1;--High: upper nibble Low: lower nibble (initially will be flipped to 1)
+	signal nibbleSelect                 : integer range 0 to 1;--High: upper nibble Low: lower nibble (initially will be flipped to 1)
 	
 begin 
 
@@ -76,23 +77,30 @@ begin
 
 	WritingQue: Process(iclock, enable_state, ControllerStatus)
     begin
-    if rising_edge(iclock) and ControllerStatus.isBusy = '0' then     
-        if enable_counter < LCD_3State_Enable_Time then
-            enable_counter <= enable_counter + 1;
-        else
+    if rising_edge(iclock) then
+        if ControllerStatus.isBusy = '1' then
+            nibbleSelect <= 1;
             enable_counter <= 0;
-            if enable_state < EnableStateRange'high then
-                enable_state <= enable_state + 1;
+        elsif ControllerStatus.isBusy = '0' then     
+            if enable_counter < LCD_3State_Enable_Time then
+                enable_counter <= enable_counter + 1;
             else
-                enable_state <= 0;
-                if nibbleSelect = 0 then
-                    nibbleSelect <= 1;
+                enable_counter <= 0;
+                if enable_state < EnableStateRange'high then
+                    enable_state <= enable_state + 1;
                 else
-                    nibbleSelect <= 0;
-                    if word_counter < 34 then--specific to case
-                        word_counter <= word_counter + 1;
+                    enable_state <= 0;
+                    if nibbleSelect = 0 then
+                        nibbleSelect <= 1;
+                        wordChange <= '0';
                     else
-                        word_counter <= 1;
+                        nibbleSelect <= 0;
+                        wordChange <= '1';
+                        if word_counter < 34 then--specific to case
+                            word_counter <= word_counter + 1;
+                        else
+                            word_counter <= 1;
+                        end if;
                     end if;
                 end if;
             end if;
@@ -102,17 +110,19 @@ begin
     
     process(WriteStatus)
     begin
-    if WriteStatus'event then
-        charNibble(0) <= word(3 downto 0);--low nibble
-        charNibble(1) <= word(7 downto 4);--high nibble
+    if WriteStatus.isBusy = '0' then
+        charNibble(1) <= word(3 downto 0);--low nibble
+        charNibble(0) <= word(7 downto 4);--high nibble
     end if;
     end process;
     
-    process(word_counter, ControllerStatus,iClock)
+--    word_counter_unsigned <= to_unsigned(word_counter,6);
+    
+    process(word_counter, ControllerStatus, iClock)
     begin
     if ControllerStatus.isBusy = '1' then
         WriteStatus.isBusy <= '0';
-    elsif word_counter'event then
+    elsif wordChange = '1' then
         WriteStatus.isBusy <= '0';
     else
         WriteStatus.isBusy <= '1';

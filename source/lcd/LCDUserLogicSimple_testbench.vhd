@@ -45,7 +45,12 @@ begin
 		state.System <= initialize;
         state.Sensor <= light;
         state.Clock <= disabled;
-        wait for 10 ns;
+        wait for 500 ms;
+        
+        state.System <= fetch;
+        state.Sensor <= light;
+        state.Clock <= enabled;
+        wait for 100 ms;
 
 		wait;
 	end process;

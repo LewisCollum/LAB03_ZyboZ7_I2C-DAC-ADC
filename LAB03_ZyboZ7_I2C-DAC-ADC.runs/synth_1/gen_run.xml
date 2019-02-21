@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1550001420">
-  <File Type="PA-TCL" Name="LCD_Controller.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="LCD_Controller_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="LCD_Controller_reports.tcl"/>
-  <File Type="RDS-RDS" Name="LCD_Controller.vds"/>
-  <File Type="RDS-UTIL" Name="LCD_Controller_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="LCD_Controller_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="LCD_Controller.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="LCD_Controller_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="LCD_Controller_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1550777172">
+  <File Type="PA-TCL" Name="LCD_Test.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="LCD_Test_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="LCD_Test_reports.tcl"/>
+  <File Type="RDS-RDS" Name="LCD_Test.vds"/>
+  <File Type="RDS-UTIL" Name="LCD_Test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="LCD_Test_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="LCD_Test.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="LCD_Test_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="LCD_Test_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/source/button/ButtonInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/i2c/I2CInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="i2c"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDInterrupt.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/system_bus/InterruptBus.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDASCII.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDCommunication.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/system_bus/StateBus.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/source/lcd/Wait_Timer.vhd">
       <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -24,26 +74,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/source/button/btn_tb.vhd">
+    <File Path="$PPRDIR/source/lcd/LCDUserLogicSimple.vhd">
       <FileInfo>
-        <Attr Name="Library" Val="button"/>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/source/button/ButtonInterrupt.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="button"/>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/source/button/btn_debounce_toggle.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="button"/>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="Library" Val="lcd"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -51,38 +84,28 @@
     <File Path="$PPRDIR/source/state/StateController.vhd">
       <FileInfo>
         <Attr Name="Library" Val="state"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/board/LCD_Test.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="board"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/pwm/PWM.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="PWM"/>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/source/i2c/i2c_master.vhd">
+    <File Path="$PPRDIR/source/pwm/PWM_testbench.vhd">
       <FileInfo>
-        <Attr Name="Library" Val="i2c"/>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/source/i2c/I2CInterrupt.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="i2c"/>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/source/system_bus/InterruptBus.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="system_bus"/>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/source/system_bus/StateBus.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="system_bus"/>
+        <Attr Name="Library" Val="PWM"/>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -96,9 +119,49 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/source/lcd/LCDInterrupt.vhd">
+    <File Path="$PPRDIR/source/clock/ClockController.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="clock"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/clock/ClockController_testbench.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="clock"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/Wait_Timer_testbench.vhd">
       <FileInfo>
         <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/button/btn_debounce_toggle.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/button/btn_tb.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="button"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/i2c/i2c_master.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="i2c"/>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -120,7 +183,55 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/source/board/Common.vhd">
+    <File Path="$PPRDIR/source/lcd/LCDUserLogic.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/pwm/VariableClockEnable.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="PWM"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/pwm/ServoController.vhdl">
+      <FileInfo>
+        <Attr Name="Library" Val="PWM"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/pwm/ServoController_testbench.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="PWM"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDUserLogic_testbench.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCD_Controller_testbench.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/board/Board.vhd">
       <FileInfo>
         <Attr Name="Library" Val="board"/>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -128,15 +239,43 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/source/board/ZyboZ7.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="board"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/source/lcd/LCDUserLogicSimple_testbench.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="lcd"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="LCD_Controller"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="LCD_Test"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Zybo-Z7-Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/PulldownResistors.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/PulldownResistors.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

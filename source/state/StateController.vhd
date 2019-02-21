@@ -6,10 +6,6 @@ use system_bus.InterruptBus.InterruptBus;
 use system_bus.InterruptBus.peripheralsAreBusy;
 use system_bus.StateBus.all;
 
-
---use system_bus.StateBus.Sensor;
---use system_bus.StateBus.Clock;
-
 entity StateController is
   port(
     clock : in std_logic;

@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 library lcd;
-use lcd.LCDCommunication.all;
+use lcd.LCDCommunication;
 use lcd.LCDInterrupt.all;
 
 entity LCD_Controller_testbench is
@@ -13,16 +13,16 @@ architecture behavioral of LCD_Controller_testbench is
 	component LCD_Controller
 		port(
 			iclock: in std_logic;
-			userControl: in UserControl;
+			userControl: in LCDCommunication.UserControl;
 			Interrupt: out LCdInterrupt;
-			Control: out LCDControl
+			Control: out LCDCommunication.LCDControl
 		);
 	end component;
 
 	signal iclock: std_logic := '0';
-	signal userControl: UserControl;
+	signal userControl: LCDCommunication.UserControl;
 	signal Interrupt: LCdInterrupt;
-	signal Control: LCDControl;
+	signal Control: LCDCommunication.LCDControl;
 begin
 
     iclock <= not iclock after 4 ns;

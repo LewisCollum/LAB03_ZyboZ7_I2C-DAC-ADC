@@ -42,7 +42,10 @@ libraries = dict.fromkeys([
     "testing",
     "board",
     "binary_counter",
-    "address_counter"
+    "address_counter",
+    "timer_counter",
+    "debouncer",
+    "enabler"
 ])
 
 for name, library in libraries.items():

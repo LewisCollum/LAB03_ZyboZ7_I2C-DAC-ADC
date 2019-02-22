@@ -8,8 +8,8 @@ use ieee.std_logic_1164.all;
 use system_bus.StateBus.all;
 
 use system_bus.InterruptBus.InterruptBus;
-use testing.ClockUtilities.all;
-use testing.PulseUtilities.all;
+use testing.clock_util;
+use testing.pulse_util.all;
 use board.ZyboZ7;
 use vunit_lib.run_pkg.all;
 
@@ -35,19 +35,9 @@ begin
         i2c => (others => '0'));
 
       if run("test_SystemInitializeToFetch") then
-        assert state.system = initialize;    
         wait for period * 2;
         assert state.system = fetch;
         
-      elsif run("test_PauseToReset") then
-        wait for period;
-        --state.system <= pause;
-
-        wait for period * 5/2;
-        highPulseForTime(interrupt.button.reset, period*2);
-        wait until rising_edge(clock);
-        assert state.system = initialize;
-      
       end if;
     end loop;
     wait for period*2;
@@ -55,7 +45,7 @@ begin
     test_runner_cleanup(runner);
   end process;
 
-  generateClock(clock, frequency => ZyboZ7.clock.frequency);
+  clock_util.generateClock(clock, period => ZyboZ7.clock.period);
   
   unit: entity work.StateController
     port map(

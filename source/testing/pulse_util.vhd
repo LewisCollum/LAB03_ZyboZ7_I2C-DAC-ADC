@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package PulseUtilities is
+package pulse_util is
   procedure highPulseForTime(signal output: out std_logic; duration: time);
   procedure lowPulseForTime(signal output: out std_logic; duration: time);
 end package;
 
-package body PulseUtilities is
+package body pulse_util is
   procedure highPulseForTime(signal output: out std_logic; duration: time) is
   begin
     output <= '1';

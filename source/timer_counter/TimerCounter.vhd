@@ -15,7 +15,7 @@ architecture behavioral of TimerCounter is
   signal count: CounterMemory;
   
 begin
-  process(clock)
+  process(reset, clock)
   begin
     if reset = '1' then
       count <= 0;

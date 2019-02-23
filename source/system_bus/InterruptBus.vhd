@@ -22,7 +22,10 @@ end package;
 package body InterruptBus is
   function peripheralsAreBusy(interrupt: InterruptBus) return boolean is
   begin
-    if interrupt.lcd.isBusy = '1' or interrupt.i2c.isBusy = '1' then
+    if interrupt.lcd.isBusy = '1'
+      or interrupt.i2c.isBusy = '1'
+      or interrupt.button.reset = '1'
+    then
       return true;
     else
       return false;

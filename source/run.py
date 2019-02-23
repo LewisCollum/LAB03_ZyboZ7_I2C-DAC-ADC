@@ -20,7 +20,7 @@ def ghdlWaveFlag(testbenchName: str) -> list:
     return [waves[wavefile].ghdlWaveFlag(testbenchName) for wavefile in waves]
     
 root = dirname(__file__)
-ui = VUnit.from_argv()
+ui = VUnit.from_argv(vhdl_standard="2002")
 vunit_out = join(root, "vunit_out")
 
 waves = {
@@ -45,7 +45,9 @@ libraries = dict.fromkeys([
     "address_counter",
     "timer_counter",
     "debouncer",
-    "enabler"
+    "enabler",
+    "toggler",
+    "edge_detector"
 ])
 
 for name, library in libraries.items():

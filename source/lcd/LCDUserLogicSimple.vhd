@@ -23,7 +23,7 @@ architecture behavioral of LCDUserLogicSimple is
     subtype EnableStateRange is integer range 0 to 2; 
     subtype WordCounterRange is integer range 1 to 34;
 	
-	constant LCD_3State_Enable_Time 	: integer := 6000;--6250;--.125 ms (8000 Hz)
+	constant LCD_3State_Enable_Time 	: integer := 125000;--6250;--.125 ms (8000 Hz)
 	
 	signal wordChange                   : std_logic;
 	signal enable_counter				: integer;
@@ -79,8 +79,10 @@ begin
     begin
     if rising_edge(iclock) then
         if ControllerStatus.isBusy = '1' then
-            nibbleSelect <= 1;
-            enable_counter <= 0;
+            nibbleSelect <= 0;
+            enable_counter <= 2;
+            word_counter <= 1;
+            enable_state <= 0;
         elsif ControllerStatus.isBusy = '0' then     
             if enable_counter < LCD_3State_Enable_Time then
                 enable_counter <= enable_counter + 1;
@@ -93,7 +95,7 @@ begin
                     if nibbleSelect = 0 then
                         nibbleSelect <= 1;
                         wordChange <= '0';
-                    else
+                    elsif nibbleSelect = 1 then
                         nibbleSelect <= 0;
                         wordChange <= '1';
                         if word_counter < 34 then--specific to case
@@ -108,28 +110,18 @@ begin
     end if;
     end process;
     
-    process(WriteStatus)
-    begin
-    if WriteStatus.isBusy = '0' then
-        charNibble(1) <= word(3 downto 0);--low nibble
-        charNibble(0) <= word(7 downto 4);--high nibble
-    end if;
-    end process;
-    
---    word_counter_unsigned <= to_unsigned(word_counter,6);
-    
     process(word_counter, ControllerStatus, iClock)
     begin
-    if ControllerStatus.isBusy = '1' then
+    if wordChange = '1' or ControllerStatus.isBusy = '1' then
         WriteStatus.isBusy <= '0';
-    elsif wordChange = '1' then
-        WriteStatus.isBusy <= '0';
+        charNibble(1) <= word(3 downto 0);--low nibble
+        charNibble(0) <= word(7 downto 4);--high nibble
     else
         WriteStatus.isBusy <= '1';
     end if;
     end process;
 	
-	LCDenable: process(enable_state, ControllerStatus)--+ nibble select & User.isBusy signal & QueCounter inc.
+	LCDenable: process(enable_state)
     begin
         case enable_state is
             when 0 =>

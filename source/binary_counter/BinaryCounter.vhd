@@ -1,6 +1,6 @@
 library ieee;
 use ieee.numeric_std.all;
-use ieee.std_logic_1164.std_logic;
+use ieee.std_logic_1164.all;
 
 entity BinaryCounter is
   generic(width: positive);

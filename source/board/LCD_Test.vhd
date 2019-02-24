@@ -29,10 +29,9 @@ architecture test of LCD_Test is
 begin
 
     buttons <= (
-        reset => btn(3),
-        pause => btn(2),
-        sensorIncrement => btn(1),
-        clockEnable => btn(0));
+    reset => btn(0),
+    sensorIncrement => btn(1),
+    clockEnable => btn(2));
        
     je(0) <= Control_s.nibble(0);
     je(1) <= Control_s.nibble(1);

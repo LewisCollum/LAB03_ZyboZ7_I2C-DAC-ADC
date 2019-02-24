@@ -45,6 +45,14 @@ begin
         assert debouncer.output = '1';
         wait for period*(test_config.clockCycles - 3);
         assert debouncer.output = '1';
+
+      elsif run("test_holdInputHigh_OutputStaysHigh") then
+        debouncer.input <= '1';
+        wait for period*(test_config.clockCycles + 1);
+        
+        assert debouncer.output = '1';
+
+        wait for period*5;
       end if;
     end loop;
 

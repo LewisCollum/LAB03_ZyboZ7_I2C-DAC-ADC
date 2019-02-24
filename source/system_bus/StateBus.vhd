@@ -2,7 +2,7 @@ library ieee;
 use ieee.numeric_std.all;
 
 package StateBus is
-  type System is (initialize, fetch, reset);
+  type System is (initialize, fetch);
   type Sensor is (light, pot, heat, custom);
   type Clock is (disabled, enabled);
   

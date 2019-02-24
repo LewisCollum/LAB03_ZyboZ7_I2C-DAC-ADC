@@ -25,11 +25,6 @@ begin
       
     elsif rising_edge(clock) then
       case state.system is
-        when reset =>
-          if not peripheralsAreBusy(interrupt) then
-            state.system <= initialize;
-          end if;
-          
         when initialize =>
           if not peripheralsAreBusy(interrupt) then
             state.system <= fetch;

@@ -26,9 +26,16 @@ architecture behavioral of Debouncer is
 begin
 
   process(clock)
+    impure function isReadyForNewInput return boolean is
+    begin
+      return isTimerBusy = '1' and
+        counter.isDone = '1' and
+        input = '0';
+    end function;
+    
   begin
     if rising_edge(clock) then
-      if reset = '1' or (isTimerBusy = '1' and counter.isDone = '1') then
+      if reset = '1' or isReadyForNewInput then
         isTimerBusy <= '0';
         counter.reset <= '1';
         output <= '0';

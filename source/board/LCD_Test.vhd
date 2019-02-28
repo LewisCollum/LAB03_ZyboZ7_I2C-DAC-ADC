@@ -14,7 +14,7 @@ library state;
 entity LCD_Test is
     port(
     sysclk  : in std_logic;
-    sw      : in unsigned(3 downto 0);
+    btn      : in unsigned(3 downto 0);
     je      : out unsigned(5 downto 0));
 end entity;
 
@@ -29,9 +29,9 @@ architecture test of LCD_Test is
 begin
 
     buttons <= (
-        reset => sw(0),
-        sensorIncrement => sw(1),
-        clockEnable => sw(2));
+    reset => btn(0),
+    sensorIncrement => btn(1),
+    clockEnable => btn(2));
        
     je(0) <= Control_s.nibble(0);
     je(1) <= Control_s.nibble(1);

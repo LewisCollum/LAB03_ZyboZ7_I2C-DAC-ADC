@@ -7,26 +7,13 @@ package i2c_pkg is
   subtype SlaveAddress is unsigned(6 downto 0);
   type DataDirection is (sending, fetching);
   
-  type SystemState is (
-    idle,
-    run,
-    stop);
-  type RunState is (
-    start,
-    sendControl,
-    getFirstAcknowledge,
-    send,
-    fetch,
-    getAcknowledge,
-    sendAcknowledge);
+  type SystemState is (idle, run, stop);
+  type RunState is (start, sendControl, getFirstAcknowledge, send,
+                    fetch, getAcknowledge, sendAcknowledge);
 
   type State is record
     system: SystemState;
     run: RunState;
-  end record;
-  
-  type Interrupt is record
-    isBusy: std_logic;
   end record;
 
   type Control is record
@@ -34,12 +21,26 @@ package i2c_pkg is
     slaveAddress: SlaveAddress;
     dataDirection: DataDirection;
   end record;
+  
+  type Interrupt is record
+    isBusy: std_logic;
+  end record;
 
   type InternalInterrupt is record
     isBitCounterDone: std_logic;
     hasAddressChanged: std_logic;
     isStartBitDone: std_logic;
+    isEndBitDone: std_logic;
     isBusy: std_logic;
+  end record;
+
+  type MasterOutInterrupt is record
+    isStartBitDone: std_logic;
+    isEndBitDone: std_logic;
+  end record;
+
+  type MasterInInterrupt is record
+    isAcknowledged: std_logic;
   end record;
 
   type Slave is record

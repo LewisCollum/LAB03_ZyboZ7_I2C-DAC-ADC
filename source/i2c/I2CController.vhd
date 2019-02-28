@@ -20,13 +20,23 @@ architecture behavioral of I2CController is
   signal internalInterrupt: i2c_pkg.InternalInterrupt;
   signal internalControl: i2c_pkg.Control;
 
+  impure function hasAddressChanged return std_logic is
+  begin
+    for i in i2c_pkg.SlaveAddress'range loop
+      if internalControl.slaveAddress(i) /= control.slaveAddress(i) then
+        return '0';
+      end if;
+    end loop;
+    return '1';
+  end function;
+
 begin
   internalControl.enable <= enableHandler.enableHandled;
   internalControl.slaveAddress <= control.slaveAddress;
   internalControl.dataDirection <= control.dataDirection;
 
   internalInterrupt.isBitCounterDone <= '0'; -----------------
-  internalInterrupt.hasAddressChanged <= '0'; ----------------
+  internalInterrupt.hasAddressChanged <= hasAddressChanged;
   internalInterrupt.isStartBitDone <= '0'; ------------------
   internalInterrupt.isBusy <= '0'; ------------------------'
 

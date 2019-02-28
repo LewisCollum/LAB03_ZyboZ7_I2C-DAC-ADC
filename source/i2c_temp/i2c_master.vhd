@@ -8,7 +8,7 @@ ENTITY i2c_master IS
     bus_clk   : INTEGER := 400_000);   --speed the i2c bus (scl) will run at in Hz
   PORT(
     clk       : IN     STD_LOGIC;                    --system clock
-    reset_n   : IN     STD_LOGIC;                    --active low reset
+    reset   : IN     STD_LOGIC;                    --active low reset
     ena       : IN     STD_LOGIC;                    --latch in command
     addr      : IN     STD_LOGIC_VECTOR(6 DOWNTO 0); --address of target slave
     rw        : IN     STD_LOGIC;                    --'0' is write, '1' is read
@@ -38,10 +38,10 @@ ARCHITECTURE logic OF i2c_master IS
 BEGIN
 
   --generate the timing for the bus clock (scl_clk) and the data clock (data_clk)
-  PROCESS(clk, reset_n)
+  PROCESS(clk, reset)
     VARIABLE count  :  INTEGER RANGE 0 TO divider*4;  --timing for clock generation
   BEGIN
-    IF(reset_n = '0') THEN                --reset asserted
+    IF(reset = '1') THEN                --reset asserted
       stretch <= '0';
       count := 0;
     ELSIF(clk'EVENT AND clk = '1') THEN
@@ -93,9 +93,9 @@ BEGIN
   END PROCESS;
 
   --state machine and writing to sda during scl low (data_clk rising edge)
-  PROCESS(clk, reset_n)
+  PROCESS(clk, reset)
   BEGIN
-    IF(reset_n = '0') THEN                 --reset asserted
+    IF(reset = '1') THEN                 --reset asserted
       state <= ready;                      --return to initial state
       busy <= '1';                         --indicate not available
       scl_ena <= '0';                      --sets scl high impedance

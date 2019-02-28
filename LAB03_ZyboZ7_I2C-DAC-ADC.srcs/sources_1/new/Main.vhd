@@ -34,7 +34,7 @@ architecture behavioral of Main is
 
 begin
 
-    Data_s <= to_unsigned(150,8);
+    --Data_s <= to_unsigned(150,8);
     
     unfilteredButton.reset <= btn(0);
     unfilteredButton.sensorIncrement <= btn(1);
@@ -49,8 +49,23 @@ begin
     je(4) <= Control_s.Enable;
     je(5) <= Control_s.RS;
     
-    jd(0) <= '0';--SDA
-    jd(1) <= '0';--SCL
+    --jd(0) <= '0';--SDA
+    --jd(1) <= '0';--SCL
+
+    Inst_I2C: entity i2c_temp.i2c_master
+      generic map(
+        input_clk => 125_000_000,
+        bus_clk => 100_000)
+      port map(
+        clk => sysclk,
+        reset => filteredButtons.reset,
+        ena => '1',
+        addr => "1001000",
+        rw => '1',
+        data_wr => "00000000",
+        data_rd => Data_s,
+        sda => jd(0),
+        scl => jd(1));        
     
     Inst_LCD: entity lcd.LCDUserLogicSimple
     port map(

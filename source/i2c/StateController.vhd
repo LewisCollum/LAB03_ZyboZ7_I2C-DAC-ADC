@@ -29,7 +29,7 @@ begin
         when i2c_pkg.run =>
           updateRunStateMachine;
         when i2c_pkg.stop =>
-          state.system <= i2c_pkg.idle;
+          state.system <= i2c_pkg.idle when interrupt.isEndBitDone = '1';
       end case;    
     end procedure;
 

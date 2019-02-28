@@ -1,37 +1,6 @@
---------------------------------------------------------------------------------
---
---   FileName:         i2c_master.vhd
---   Dependencies:     none
---   Design Software:  Quartus II 64-bit Version 13.1 Build 162 SJ Full Version
---
---   HDL CODE IS PROVIDED "AS IS."  DIGI-KEY EXPRESSLY DISCLAIMS ANY
---   WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
---   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
---   PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL DIGI-KEY
---   BE LIABLE FOR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL
---   DAMAGES, LOST PROFITS OR LOST DATA, HARM TO YOUR EQUIPMENT, COST OF
---   PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR SERVICES, ANY CLAIMS
---   BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF),
---   ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER SIMILAR COSTS.
---
---   Version History
---   Version 1.0 11/01/2012 Scott Larson
---     Initial Public Release
---   Version 2.0 06/20/2014 Scott Larson
---     Added ability to interface with different slaves in the same transaction
---     Corrected ack_error bug where ack_error went 'Z' instead of '1' on error
---     Corrected timing of when ack_error signal clears
---   Version 2.1 10/21/2014 Scott Larson
---     Replaced gated clock with clock enable
---     Adjusted timing of SCL during start and stop conditions
---   Version 2.2 02/05/2015 Scott Larson
---     Corrected small SDA glitch introduced in version 2.1
--- 
---------------------------------------------------------------------------------
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 ENTITY i2c_master IS
   GENERIC(
@@ -82,25 +51,44 @@ BEGIN
       ELSIF(stretch = '0') THEN           --clock stretching from slave not detected
         count := count + 1;               --continue clock generation timing
       END IF;
-      CASE count IS
-        WHEN 0 TO divider-1 =>            --first 1/4 cycle of clocking
-          scl_clk <= '0';
-          data_clk <= '0';
-        WHEN divider TO divider*2-1 =>    --second 1/4 cycle of clocking
-          scl_clk <= '0';
-          data_clk <= '1';
-        WHEN divider*2 TO divider*3-1 =>  --third 1/4 cycle of clocking
-          scl_clk <= '1';                 --release scl
-          IF(scl = '0') THEN              --detect if slave is stretching clock
-            stretch <= '1';
-          ELSE
-            stretch <= '0';
-          END IF;
-          data_clk <= '1';
-        WHEN OTHERS =>                    --last 1/4 cycle of clocking
-          scl_clk <= '1';
-          data_clk <= '0';
-      END CASE;
+      if count >= 0 and count < divider then
+        scl_clk <= '0';
+        data_clk <= '0';
+      elsif count >= divider and count < divider*2 then
+        scl_clk <= '0';
+        data_clk <= '1';
+      elsif count >= divider*2 and count < divider*3 then 
+        scl_clk <= '1';                 --release scl
+        IF(scl = '0') THEN              --detect if slave is stretching clock
+          stretch <= '1';
+        ELSE
+          stretch <= '0';
+        END IF;
+        data_clk <= '1';
+      else 
+        scl_clk <= '1';
+        data_clk <= '0';       
+      end if;
+        
+      -- CASE count IS
+      --   WHEN 0 TO divider-1 =>            --first 1/4 cycle of clocking
+      --     scl_clk <= '0';
+      --     data_clk <= '0';
+      --   WHEN divider TO divider*2-1 =>    --second 1/4 cycle of clocking
+      --     scl_clk <= '0';
+      --     data_clk <= '1';
+      --   WHEN divider*2 TO divider*3-1 =>  --third 1/4 cycle of clocking
+      --     scl_clk <= '1';                 --release scl
+      --     IF(scl = '0') THEN              --detect if slave is stretching clock
+      --       stretch <= '1';
+      --     ELSE
+      --       stretch <= '0';
+      --     END IF;
+      --     data_clk <= '1';
+      --   WHEN OTHERS =>                    --last 1/4 cycle of clocking
+      --     scl_clk <= '1';
+      --     data_clk <= '0';
+      -- END CASE;
     END IF;
   END PROCESS;
 

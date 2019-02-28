@@ -13,7 +13,7 @@ begin
   output <= input when enable = '1' else '0';
 end architecture;
 
-architecture impedance of Enabler is
+architecture high_impedance of Enabler is
 begin
   output <= input when enable = '1' else 'Z';
 end architecture;
@@ -23,3 +23,12 @@ begin
   output <= input when enable = '1' else '1';
 end architecture;
   
+architecture weak_low of Enabler is
+begin
+  output <= input when enable = '1' else 'L';
+end architecture;
+
+architecture weak_high of Enabler is
+begin
+  output <= input when enable = '1' else 'H';
+end architecture;

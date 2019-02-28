@@ -34,7 +34,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-10"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="144"/>
+    <Option Name="WTXSimLaunchSim" Val="152"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -62,9 +62,79 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/source/system_bus/StateBus.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="system_bus"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/source/button/ButtonInterrupt.vhd">
         <FileInfo>
           <Attr Name="Library" Val="button"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/enabler/Enabler.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="enabler"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/timer_counter/TimerCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="timer_counter"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/debouncer/Debouncer.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="debouncer"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/toggler/Toggler.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="toggler"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/edge_detector/EdgeDetector.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="edge_detector"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/button/ButtonController.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="button"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/system_bus/DataBus.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="system_bus"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/pwm/PWM.vhdl">
+        <FileInfo>
+          <Attr Name="Library" Val="PWM"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/clock/ClockController.vhdl">
+        <FileInfo>
+          <Attr Name="Library" Val="clock"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -104,13 +174,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/source/system_bus/StateBus.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="system_bus"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/source/lcd/Wait_Timer.vhd">
         <FileInfo>
           <Attr Name="Library" Val="lcd"/>
@@ -139,16 +202,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/source/board/LCD_Test.vhd">
+      <File Path="$PPRDIR/source/pwm/ServoController.vhdl">
+        <FileInfo>
+          <Attr Name="Library" Val="PWM"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Main.vhd">
         <FileInfo>
           <Attr Name="Library" Val="board"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/source/pwm/PWM.vhdl">
+      <File Path="$PPRDIR/source/board/LCD_Test.vhd">
         <FileInfo>
-          <Attr Name="Library" Val="PWM"/>
+          <Attr Name="Library" Val="board"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -157,22 +227,6 @@
       <File Path="$PPRDIR/source/pwm/PWM_testbench.vhd">
         <FileInfo>
           <Attr Name="Library" Val="PWM"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/system_bus/DataBus.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="system_bus"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/clock/ClockController.vhdl">
-        <FileInfo>
-          <Attr Name="Library" Val="clock"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -189,22 +243,6 @@
       <File Path="$PPRDIR/source/lcd/Wait_Timer_testbench.vhd">
         <FileInfo>
           <Attr Name="Library" Val="lcd"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/button/btn_debounce_toggle.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="button"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/button/btn_tb.vhd">
-        <FileInfo>
-          <Attr Name="Library" Val="button"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -235,14 +273,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/source/pwm/VariableClockEnable.vhdl">
-        <FileInfo>
-          <Attr Name="Library" Val="PWM"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/source/pwm/ServoController.vhdl">
         <FileInfo>
           <Attr Name="Library" Val="PWM"/>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -282,9 +312,137 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/source/lcd/LCDUserLogicSimple_testbench.vhd">
+      <File Path="$PPRDIR/source/button/TestButtonController.vhd">
         <FileInfo>
-          <Attr Name="Library" Val="lcd"/>
+          <Attr Name="Library" Val="button"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/button/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="button"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/testing/pulse_util.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="testing"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/testing/clock_util.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="testing"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/binary_counter/BinaryCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="binary_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/binary_counter/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="binary_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/binary_counter/TestBinaryCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="binary_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/debouncer/TestDebouncer.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="debouncer"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/debouncer/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="debouncer"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/timer_counter/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="timer_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/timer_counter/TestTimerCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="timer_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/state/TestStateController.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="state"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/address_counter/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="address_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/address_counter/TestAddressCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="address_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/address_counter/AddressCounter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="address_counter"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/edge_detector/test_config.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="edge_detector"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/source/edge_detector/TestEdgeDetector.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="edge_detector"/>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -292,7 +450,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="LCD_Test"/>
+        <Option Name="TopModule" Val="Main"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -359,8 +517,8 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="LCDUserLogicSimple_testbench"/>
-        <Option Name="TopLib" Val="lcd"/>
+        <Option Name="TopModule" Val="Main"/>
+        <Option Name="TopLib" Val="board"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>

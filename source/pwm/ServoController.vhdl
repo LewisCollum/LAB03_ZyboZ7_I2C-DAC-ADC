@@ -33,7 +33,7 @@ begin
         end if;
     end process;
 
-Inst_PWM : PWM.PWM
+Inst_PWM : entity pwm.PWM
         generic map(boardClock => 125_000_000)
         port map(
             iClock      => iClock,

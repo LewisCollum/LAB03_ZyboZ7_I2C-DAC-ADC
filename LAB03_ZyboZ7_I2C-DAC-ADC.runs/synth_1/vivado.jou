@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Feb 21 14:50:59 2019
-# Process ID: 7944
+# Start of session at: Sun Feb 24 16:22:48 2019
+# Process ID: 8848
 # Current directory: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/LAB03_ZyboZ7_I2C-DAC-ADC.runs/synth_1
-# Command line: vivado.exe -log LCD_Test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LCD_Test.tcl
-# Log file: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/LAB03_ZyboZ7_I2C-DAC-ADC.runs/synth_1/LCD_Test.vds
+# Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
+# Log file: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/LAB03_ZyboZ7_I2C-DAC-ADC.runs/synth_1/Main.vds
 # Journal file: C:/Users/ulab/Documents/GitHub/LAB03_ZyboZ7_I2C-DAC-ADC/LAB03_ZyboZ7_I2C-DAC-ADC.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source LCD_Test.tcl -notrace
+source Main.tcl -notrace

@@ -11,8 +11,6 @@ entity ClockController is
 		iClock  	: in std_logic;
 		iReset 	 	: in std_logic;
 		Data        : in word;
-		--iDutyCycle  : in unsigned;
-		--iFrequency  : in unsigned;
 		oEnable 	: out std_logic);
 end ClockController;
 

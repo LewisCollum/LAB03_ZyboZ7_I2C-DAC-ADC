@@ -28,7 +28,7 @@ begin
             if iReset = '1' then
                 dutyCycle <= to_unsigned(0,17);--5%
             else
-                dutyCycle <= to_unsigned(((to_integer(Data)*5_000) + 5_000*(256-1))/(256-1),17);--duty cycle from 5% to 10%
+                dutyCycle <= to_unsigned(((to_integer(Data)*10_000) + 2_500*(256-1))/(256-1),17);--duty cycle from 5% to 10%
             end if;
         end if;
     end process;

@@ -21,11 +21,24 @@ architecture behavioral of PWM IS
 	signal iFrequency_s	: unsigned(10 downto 0) := (others => '0');
 	signal period : integer := 0;
 	signal dutyCycle : integer := 50_000;
+--	signal change : boolean := false;
+	signal updateVal : boolean := true;
 
 begin
+--    process(iClock)
+--    begin
+--        iDutyCycle_s <= iDutyCycle;
+--        iFrequency_s <= iFrequency;
+--        if iDutyCycle /= iDutyCycle_s or iFrequency /= iFrequency_s then
+--            change <= true;
+--        else
+--            change <= false;
+--        end if;
+--    end process;
+
 	process (iClock)
 	begin
-	   if rising_edge(iClock) then
+	   if rising_edge(iClock) and updateVal then
 	       if iFrequency = to_unsigned(0,11) then
 	           period <= 0;
 	       else
@@ -34,10 +47,9 @@ begin
 	       if iDutyCycle = to_unsigned(0,17) then
                 dutyCycle <= 0;
            else
-                dutyCycle <= period/(100_000 / (to_integer(iDutyCycle)));--amount of time in a period oEnable is high
+                dutyCycle <= (period/(100_000_000 / (to_integer(iDutyCycle))))*1000;--amount of time in a period oEnable is high
            end if;
-	       iDutyCycle_s <= iDutyCycle;
-	       iFrequency_s <= iFrequency;
+           
 	   end if;
 	end process;
 	
@@ -47,17 +59,19 @@ begin
 			oEnable <= '0';
 			count 	<= 0;
 			oPeriod <= '0';
-		elsif iDutyCycle /= iDutyCycle_s or iFrequency /= iFrequency_s then
-            oEnable <= '0';
-            count     <= 0;
-            oPeriod <= '1';
+--		elsif iDutyCycle /= iDutyCycle_s or iFrequency /= iFrequency_s then
+--            oEnable <= '0';
+--            count     <= 0;
+--            oPeriod <= '1';
 		elsif rising_edge(iClock) then
 			if count = period then
 				count 	<= 0;
 				oPeriod <= '1';
+				updateVal <= true;
 			else
 				count 	<= count + 1;
 				oPeriod <= '0';
+				updateVal <= false;
 			end if;
 			if count < dutyCycle then
                 oEnable <= '1';

@@ -56,7 +56,7 @@ begin
             state => state_s);
             
     Inst_ButtonController: entity button.ButtonController
-          generic map(debounceClockCycles => 100_000)
+          generic map(debounceClockCycles => 500_000)
           port map(
               clock => sysclk,
               reset => filteredButton.reset,

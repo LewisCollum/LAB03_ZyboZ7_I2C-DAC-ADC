@@ -39,4 +39,4 @@ begin
       loadable => loadable,
       count => address);
       
-end architecture;
+end behavioral;
